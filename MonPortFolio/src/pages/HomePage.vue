@@ -2,8 +2,9 @@
     <h1>
         homePage
     </h1>
+    <apiData/>
 </template>
 
 <script setup>
-import Header from '@/components/Header.vue';
+import apiData from '@/components/apiData.vue';
 </script>
