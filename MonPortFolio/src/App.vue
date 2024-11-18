@@ -3,17 +3,21 @@
   <div class="container">
     <RouterView />
   </div>
+  <Footer />
 </template>
 
 <script setup>
-import Header from './components/Header.vue';
-
+import Header from './components/HeaderNavBar.vue'
+import Footer from './components/FooterNavBar.vue'
 </script>
 
 <style>
-/* Container styling for main content */
-.container {
-  padding-top: 2rem;
+/* .container {
   max-width: calc(100vw - 4rem);
+} */
+
+body {
+  margin: 0;
+  background: #2e364a;
 }
 </style>

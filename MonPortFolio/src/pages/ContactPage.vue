@@ -4,7 +4,7 @@
       <h2>Me contacter</h2>
 
       <form @submit.prevent="handleSubmit">
-        <div class="form-group" :class="{ 'error': errors.from }">
+        <div class="form-group" :class="{ error: errors.from }">
           <label for="from">De :</label>
           <input
             type="email"
@@ -14,10 +14,12 @@
             @input="validateField('from')"
             placeholder="votre@email.com"
           />
-          <span class="error-message" v-if="errors.from">{{ errors.from }}</span>
+          <span class="error-message" v-if="errors.from">{{
+            errors.from
+          }}</span>
         </div>
 
-        <div class="form-group" :class="{ 'error': errors.subject }">
+        <div class="form-group" :class="{ error: errors.subject }">
           <label for="subject">Sujet :</label>
           <input
             type="text"
@@ -27,10 +29,12 @@
             @input="validateField('subject')"
             placeholder="Sujet de l'email"
           />
-          <span class="error-message" v-if="errors.subject">{{ errors.subject }}</span>
+          <span class="error-message" v-if="errors.subject">{{
+            errors.subject
+          }}</span>
         </div>
 
-        <div class="form-group" :class="{ 'error': errors.message }">
+        <div class="form-group" :class="{ error: errors.message }">
           <label for="message">Message :</label>
           <textarea
             id="message"
@@ -40,7 +44,9 @@
             rows="6"
             placeholder="Votre message ici"
           ></textarea>
-          <span class="error-message" v-if="errors.message">{{ errors.message }}</span>
+          <span class="error-message" v-if="errors.message">{{
+            errors.message
+          }}</span>
         </div>
 
         <div class="form-actions">
@@ -65,27 +71,27 @@ import axios from 'axios'
 const message = ref()
 
 const formData = reactive({
-  to:'',
+  to: '',
   from: '',
   subject: '',
-  message: ''
+  message: '',
 })
 
 const errors = reactive({
   from: '',
   subject: '',
-  message: ''
+  message: '',
 })
 
 const isLoading = ref(false)
 const submitStatus = ref(null)
 
-const validateEmail = (email) => {
+const validateEmail = email => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return emailRegex.test(email)
 }
 
-const validateField = (field) => {
+const validateField = field => {
   errors[field] = ''
 
   switch (field) {
@@ -120,12 +126,14 @@ const validateForm = () => {
 }
 
 const isFormValid = computed(() => {
-  return formData.from &&
-         formData.subject &&
-         formData.message &&
-         !errors.from &&
-         !errors.subject &&
-         !errors.message
+  return (
+    formData.from &&
+    formData.subject &&
+    formData.message &&
+    !errors.from &&
+    !errors.subject &&
+    !errors.message
+  )
 })
 
 const handleSubmit = async () => {
@@ -141,22 +149,22 @@ const handleSubmit = async () => {
 
     message.value = formData.message
 
-    formData.message = "Bonjour, vous avez un nouveau message de " + formData.from + "\n\n"
+    formData.message =
+      'Bonjour, vous avez un nouveau message de ' + formData.from + '\n\n'
     formData.message += message.value
 
     await axios.post('http://localhost:5000/send-email', formData)
 
     submitStatus.value = {
       type: 'success',
-      message: 'Email envoyé avec succès !'
+      message: 'Email envoyé avec succès !',
     }
 
-    Object.keys(formData).forEach(key => formData[key] = '')
-
+    Object.keys(formData).forEach(key => (formData[key] = ''))
   } catch (error) {
     submitStatus.value = {
       type: 'error',
-      message: 'Erreur lors de l\'envoi. Veuillez réessayer.'
+      message: "Erreur lors de l'envoi. Veuillez réessayer.",
     }
     console.error('Erreur:', error)
   } finally {
@@ -202,18 +210,22 @@ label {
   font-weight: 500;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.75rem;
   border: 2px solid #e1e1e1;
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
-  border-color: #4CAF50;
+  border-color: #4caf50;
   box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
@@ -230,7 +242,7 @@ input:focus, textarea:focus {
 button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 6px;
@@ -260,7 +272,9 @@ button:disabled {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .status-message {
