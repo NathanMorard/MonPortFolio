@@ -1,8 +1,8 @@
 <template>
   <div class="homepage">
     <div class="content">
-      <h1>Je suis Nathan Morard</h1>
-      <h2>Un développeur full-stack</h2>
+      <h1>Nathan Morard</h1>
+      <h2>Développeur full-stack</h2>
       <div class="buttons">
         <RouterLink
           to="/contact"
@@ -44,8 +44,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 55px;
-  padding-top: 25dvh;
+  /* padding: 55px; */
+  /* padding-top: 25dvh; */
 }
 
 .content {

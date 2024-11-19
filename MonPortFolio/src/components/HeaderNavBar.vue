@@ -37,26 +37,24 @@
         >
           Contact
         </RouterLink>
+        <!-- <switchMode/> -->
       </div>
     </nav>
   </header>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isMenuOpen: false,
-    }
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen
-    },
-    closeMenu() {
-      this.isMenuOpen = false
-    },
-  },
+<script setup>
+import { ref } from 'vue'
+// import switchMode from './switchMode.vue'
+
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
 }
 </script>
 
