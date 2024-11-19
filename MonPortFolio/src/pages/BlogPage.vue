@@ -1,6 +1,6 @@
 <template>
   <div class="Content">
-    <h1>Qui suis-je ?</h1>
+    <!-- <h1>Qui suis-je ?</h1>
     <p>
       Qui cum venisset ob haec festinatis itineribus Antiochiam, praestrictis
       palatii ianuis, contempto Caesare, quem videri decuerat, ad praetorium cum
@@ -8,7 +8,7 @@
       processit in publicum, sed abditus multa in eius moliebatur exitium addens
       quaedam relationibus supervacua, quas subinde dimittebat ad principem.
     </p>
-    <h2>Mon parcours</h2>
+    <h2>Mon parcours</h2> -->
     <div class="timeline">
       <div class="container left">
         <img src="../assets/img/amazon.png" alt="Amazon" />
@@ -69,17 +69,6 @@
 <script setup></script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color: #2e364a;
-}
-
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -87,11 +76,12 @@ body {
 }
 
 .container {
-  padding: 10px 50px;
+  padding: 10px 40px;
   position: relative;
   width: 50%;
   animation: movedawn 1s linear forwards;
   opacity: 0;
+  box-sizing: border-box;
 }
 
 @keyframes movedawn {
@@ -181,7 +171,7 @@ body {
   margin-bottom: 15px;
 }
 
-.left::before {
+/* .left::before {
   content: '';
   height: 0;
   width: 0;
@@ -205,7 +195,7 @@ body {
   border-bottom: 15px solid transparent;
   border-right: 15px solid #fff;
   left: -15px;
-}
+} */
 
 .left-container-arrow {
   height: 0;
@@ -231,37 +221,44 @@ body {
   right: -15px;
 }
 
-/* @media screen and (max-width: 800px) {
-.timeline {
-margin: 50px auto;
-}
-.timeline::after {
-right: 31px;
-}
-.container {
-width: 100%;
-padding-left: 80px;
-padding-right: 25px;
-}
-.text-box {
-font-size: 13px;
-}
-.text-box small {
-margin-bottom: 10px;
-}
+@media screen and (max-width: 768px) {
+  .timeline {
+    margin: 50px auto;
+  }
+  .timeline::after {
+    right: 31px;
+  }
+  .container {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box {
+    font-size: 13px;
+  }
+  .text-box small {
+    margin-bottom: 10px;
+  }
 
-.container.right{
-left: 0;
-}
+  .container.right,
+  .container.left {
+    left: 0;
+  }
 
-.container.left img, .container.right img{
-left: 10px
-}
+  .container.left img,
+  .container.right img {
+    left: 10px;
+  }
 
-.left-container-arrow, .right-container-arrow{
-border-right: 15px solid #fff;
-border-left: 0;
-left: -15px;
+  .left-container-arrow,
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
 }
-} */
 </style>
