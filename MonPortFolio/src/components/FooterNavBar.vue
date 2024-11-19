@@ -45,9 +45,10 @@
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  position: fixed;
-  bottom: 0;
+  position: sticky; /* Change from fixed to sticky */
+  bottom: 0; /* Keep it at the bottom of the page */
   width: 100%;
+  margin-top: 2rem; /* Optional, to give space above */
 }
 
 .navBar {

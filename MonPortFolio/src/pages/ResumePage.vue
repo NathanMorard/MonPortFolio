@@ -18,6 +18,9 @@ const downloadCV = () => {
 </script>
 
 <style>
+h1 {
+  color: red;
+}
 .cv-container {
   text-align: center;
   margin-top: 20px;
@@ -28,9 +31,7 @@ const downloadCV = () => {
   margin: 20px auto;
   max-width: 80%;
 }
-.buttons {
-  margin-bottom: 100px;
-}
+
 .buttons button {
   background-color: #1e1e1e;
   color: white;

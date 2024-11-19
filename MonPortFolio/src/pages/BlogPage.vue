@@ -78,12 +78,49 @@
         </div>
       </div>
     </div>
+    <div class="Skills">
+      <div class="wrapper">
+        <img class="image" src="../assets/img/pp.JPG" alt="photo de profil" />
+        <div class="text-box">
+          <h2>Mes competences</h2>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup></script>
 
 <style scoped>
+.Skills {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: blue;
+}
+
+.wrapper {
+  margin: 150px auto;
+  width: 70%;
+}
+
+.image {
+  float: left;
+  max-width: 320px;
+}
+
+.text-box {
+  color: black;
+}
+
+.text-box h2 {
+  font-size: 42px;
+}
+
+.content {
+  align-content: center;
+}
+
 .timeline {
   position: relative;
   max-width: 1200px;
@@ -190,32 +227,6 @@
   display: inline-block;
   margin-bottom: 15px;
 }
-
-/* .left::before {
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 28px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid #fff;
-  right: -15px;
-}
-
-.right::before {
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 28px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #fff;
-  left: -15px;
-} */
 
 .left-container-arrow {
   height: 0;

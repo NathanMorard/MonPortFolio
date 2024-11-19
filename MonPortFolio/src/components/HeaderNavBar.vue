@@ -30,6 +30,14 @@
           Curriculum
         </RouterLink>
         <RouterLink
+          to="/realisation"
+          class="nav-item"
+          :class="{ active: $route.path === '/realisation' }"
+          @click="closeMenu"
+        >
+          Mes réalisations
+        </RouterLink>
+        <RouterLink
           to="/contact"
           class="nav-item"
           :class="{ active: $route.path === '/contact' }"
