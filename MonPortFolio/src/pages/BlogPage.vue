@@ -1,64 +1,79 @@
 <template>
   <div class="Content">
-    <!-- <h1>Qui suis-je ?</h1>
-    <p>
+    <h1>Qui suis-je ?</h1>
+    <p id="txtPres">
       Qui cum venisset ob haec festinatis itineribus Antiochiam, praestrictis
       palatii ianuis, contempto Caesare, quem videri decuerat, ad praetorium cum
       pompa sollemni perrexit morbosque diu causatus nec regiam introiit nec
       processit in publicum, sed abditus multa in eius moliebatur exitium addens
       quaedam relationibus supervacua, quas subinde dimittebat ad principem.
     </p>
-    <h2>Mon parcours</h2> -->
+    <h2>Mon parcours</h2>
     <div class="timeline">
       <div class="container left">
-        <img src="../assets/img/amazon.png" alt="Amazon" />
+        <img src="../assets/img/logoStJo.png" alt="Amazon" />
         <div class="content">
-          <h2>Amazon Inc.</h2>
-          <small>2019 - 2020</small>
+          <h2>Lycée saint Joseph</h2>
+          <small>2020 - 2021</small>
           <p>
-            The success of every websites depends on search engine optimisation
-            and digital marketing strategy. If you are on first page of all
-            major search...
+            Obtention d'un bac général option SVT MATH et Physique chimie au
+            lycée saint joseph à Avignon
           </p>
           <span class="left-container-arrow"></span>
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/tesla.png" alt="Tesla" />
+        <img src="../assets/img/logoCA.png" alt="Tesla" />
         <div class="content">
-          <h2>Tesla Inc.</h2>
-          <small>2020 - 2021</small>
+          <h2>Campus Academy</h2>
+          <small>2021 - 2022</small>
           <p>
-            The success of every websites depends on search engine optimisation
-            and digital marketing strategy. If you are on first page of all
-            major search...
+            Première année d'étude supérieur dans le domaine du développement
+            informatique à l'école Campus Academy qui a fermé ses portes
           </p>
           <span class="right-container-arrow"></span>
         </div>
       </div>
       <div class="container left">
-        <img src="../assets/img/flipkart.png" alt="Flipkart" />
+        <img src="../assets/img/logoCESI.png" alt="Flipkart" />
         <div class="content">
-          <h2>Flipkart</h2>
-          <small>2021 - 2022</small>
+          <h2>CESI</h2>
+          <small>2022 - 2023</small>
+          <p>Obtention d'un BTS 'Développeur informatique'</p>
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+      <div class="container right">
+        <img src="../assets/img/logoCESI.png" alt="Toyota" />
+        <div class="content">
+          <h2>CESI</h2>
+          <small>2023 - 2024</small>
           <p>
-            The success of every websites depends on search engine optimisation
-            and digital marketing strategy. If you are on first page of all
-            major search...
+            Obtention d'un bachelor 'Concepteur et développeur d'application'
+          </p>
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+      <div class="container left">
+        <img src="../assets/img/logodg.png" alt="Flipkart" />
+        <div class="content">
+          <h2>DG Inventaires & Co</h2>
+          <small>2022 - 2024</small>
+          <p>
+            Alternance effectuée au sein de l'entreprise DG Inventaires, au
+            service informatique. Participation à la TMA (Tierce Maintenance
+            Applicative) et au MCO (Maintien en Condition Opérationnelle) d'un
+            ERP, développement d'un site web et création d'un spool.
           </p>
           <span class="left-container-arrow"></span>
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/toyota.png" alt="Toyota" />
+        <img src="../assets/img/freelance.png" alt="Toyota" />
         <div class="content">
-          <h2>Toyota</h2>
-          <small>2021 - 2022</small>
-          <p>
-            The success of every websites depends on search engine optimisation
-            and digital marketing strategy. If you are on first page of all
-            major search...
-          </p>
+          <h2>Freelance</h2>
+          <small>2024 - </small>
+          <p>Développeur informatique en freelance</p>
           <span class="right-container-arrow"></span>
         </div>
       </div>
@@ -108,7 +123,12 @@
 .container:nth-child(4) {
   animation-delay: 3s;
 }
-
+.container:nth-child(5) {
+  animation-delay: 4s;
+}
+.container:nth-child(6) {
+  animation-delay: 5s;
+}
 .container.left {
   left: 50%;
 }
@@ -119,7 +139,7 @@
 
 .content {
   padding: 20px 30px;
-  background-color: #fff;
+  background-color: #d1cfcf;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -146,7 +166,7 @@
   position: absolute;
   width: 6px;
   height: 100%;
-  background-color: #fff;
+  background-color: #d1cfcf;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -221,18 +241,59 @@
   right: -15px;
 }
 
+h1,
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#txtPres {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  margin: 0 auto 20px auto;
+  max-width: 800px;
+  padding: 0 15px;
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  content {
+    padding: 10px;
+  }
   .timeline {
     margin: 50px auto;
+    size: calc(100% - 100px);
   }
   .timeline::after {
     right: 31px;
   }
+
   .container {
-    width: 100%;
+    width: calc(100% - 80px);
     padding-left: 80px;
     padding-right: 25px;
   }
+
   .text-box {
     font-size: 13px;
   }
