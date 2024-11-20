@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="form-container">
     <div class="form-card">
       <h2>Me contacter</h2>
@@ -301,4 +301,56 @@ button:disabled {
     padding: 1.5rem;
   }
 }
-</style>
+</style> -->
+
+<template>
+  <div>
+    <form @submit.prevent="sendEmail">
+      <input v-model="name" type="text" placeholder="Nom" required />
+      <input v-model="email" type="email" placeholder="Email" required />
+      <textarea v-model="message" placeholder="Message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</template>
+
+<script>
+import emailjs from 'emailjs-com'
+
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: '',
+    }
+  },
+  methods: {
+    sendEmail() {
+      const templateParams = {
+        name: this.name,
+        email: this.email,
+        message: this.message,
+      }
+
+      emailjs
+        .send(
+          'service_x7gbtpw',
+          'template_zu7zli8',
+          templateParams,
+          'XsRO5lgvmT00IdL1u',
+        )
+        .then(
+          response => {
+            console.log('Email envoyé', response)
+            alert('Email envoyé avec succès')
+          },
+          error => {
+            console.log("Erreur d'envoi d'email", error)
+            alert("Erreur lors de l'envoi de l'email")
+          },
+        )
+    },
+  },
+}
+</script>

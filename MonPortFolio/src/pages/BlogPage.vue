@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/logoCA.png" alt="Tesla" />
+        <img src="../assets/img/logoCA.png" alt="tesla" />
         <div class="content">
           <h2>Campus Academy</h2>
           <small>2021 - 2022</small>
@@ -80,7 +80,7 @@
     </div>
     <div class="Skills">
       <div class="wrapper">
-        <img class="image" src="../assets/img/pp.JPG" alt="photo de profil" />
+        <img class="image" src="../assets/img/pp.png" alt="photo de profil" />
         <div class="text-box">
           <h2>Mes competences</h2>
         </div>
