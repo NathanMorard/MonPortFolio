@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div class="form-container">
     <div class="form-card">
       <h2>Me contacter</h2>
@@ -66,12 +66,9 @@
 
 <script setup>
 import { ref, reactive, computed } from 'vue'
-import axios from 'axios'
-
-const message = ref()
+import emailjs from 'emailjs-com'
 
 const formData = reactive({
-  to: '',
   from: '',
   subject: '',
   message: '',
@@ -85,11 +82,6 @@ const errors = reactive({
 
 const isLoading = ref(false)
 const submitStatus = ref(null)
-
-const validateEmail = email => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  return emailRegex.test(email)
-}
 
 const validateField = field => {
   errors[field] = ''
@@ -119,6 +111,11 @@ const validateField = field => {
   }
 }
 
+const validateEmail = email => {
+  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+  return regex.test(email)
+}
+
 const validateForm = () => {
   validateField('from')
   validateField('subject')
@@ -145,22 +142,35 @@ const handleSubmit = async () => {
   submitStatus.value = null
 
   try {
-    formData.to = 'morard.nathan@gmail.com'
-
-    message.value = formData.message
-
-    formData.message =
-      'Bonjour, vous avez un nouveau message de ' + formData.from + '\n\n'
-    formData.message += message.value
-
-    await axios.post('http://localhost:5000/send-email', formData)
-
-    submitStatus.value = {
-      type: 'success',
-      message: 'Email envoyé avec succès !',
+    const templateParams = {
+      from: formData.from,
+      message: formData.message,
+      Subject: formData.subject,
     }
 
-    Object.keys(formData).forEach(key => (formData[key] = ''))
+    await emailjs
+      .send(
+        'service_x7gbtpw',
+        'template_zu7zli8',
+        templateParams,
+        'XsRO5lgvmT00IdL1u',
+      )
+      .then(
+        response => {
+          console.log('Email envoyé', response)
+          submitStatus.value = {
+            type: 'success',
+            message: 'Email envoyé avec succès',
+          }
+        },
+        error => {
+          console.log("Erreur d'envoi d'email", error)
+          submitStatus.value = {
+            type: 'error',
+            message: "Erreur lors de l'envoi de l'email",
+          }
+        },
+      )
   } catch (error) {
     submitStatus.value = {
       type: 'error',
@@ -301,56 +311,4 @@ button:disabled {
     padding: 1.5rem;
   }
 }
-</style> -->
-
-<template>
-  <div>
-    <form @submit.prevent="sendEmail">
-      <input v-model="name" type="text" placeholder="Nom" required />
-      <input v-model="email" type="email" placeholder="Email" required />
-      <textarea v-model="message" placeholder="Message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </div>
-</template>
-
-<script>
-import emailjs from 'emailjs-com'
-
-export default {
-  data() {
-    return {
-      name: '',
-      email: '',
-      message: '',
-    }
-  },
-  methods: {
-    sendEmail() {
-      const templateParams = {
-        name: this.name,
-        email: this.email,
-        message: this.message,
-      }
-
-      emailjs
-        .send(
-          'service_x7gbtpw',
-          'template_zu7zli8',
-          templateParams,
-          'XsRO5lgvmT00IdL1u',
-        )
-        .then(
-          response => {
-            console.log('Email envoyé', response)
-            alert('Email envoyé avec succès')
-          },
-          error => {
-            console.log("Erreur d'envoi d'email", error)
-            alert("Erreur lors de l'envoi de l'email")
-          },
-        )
-    },
-  },
-}
-</script>
+</style>
