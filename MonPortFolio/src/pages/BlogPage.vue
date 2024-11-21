@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="container left">
-        <img :src="logoDG" alt="Logo DG inventaires" />
+        <!-- <img :src="logoDG" alt="Logo DG inventaires" /> -->
         <div class="content">
           <h2>DG Inventaires & Co</h2>
           <small>2022 - 2024</small>
@@ -119,7 +119,7 @@
 </template>
 
 <script setup>
-import logoDG from '../assets/img/logodg.jpg'
+// import logoDG from '../assets/img/logodg.jpg'
 </script>
 
 <style scoped>
