@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+}
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+#FirstBut {
+  background-color: #fe934b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#FirstBut:hover {
+  background-color: #d15036;
+}
+
+#SecondBut {
+  background-color: #4dbdca;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#SecondBut:hover {
+  background-color: #62b5be;
+}

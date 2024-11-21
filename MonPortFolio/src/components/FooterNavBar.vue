@@ -45,10 +45,10 @@
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  position: sticky;
-  bottom: 0;
+  position: sticky; /* Change from fixed to sticky */
+  bottom: 0; /* Keep it at the bottom of the page */
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 2rem; /* Optional, to give space above */
 }
 
 .navBar {
@@ -83,7 +83,7 @@
 
 .navLink {
   text-decoration: none;
-  color: inherit;
+  color: inherit; /* Hérite la couleur du bouton */
   display: flex;
   align-items: center;
   gap: 0.5rem;

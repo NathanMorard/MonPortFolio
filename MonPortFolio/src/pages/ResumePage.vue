@@ -4,7 +4,7 @@
     <!-- <img src="../assets/img/cv.png" alt="CV Nathan Morard" class="cv-image" /> -->
     <img src="../assets/img/CV.jpg" alt="CV Nathan Morard" class="cv-image" />
     <div class="buttons">
-      <button @click="downloadCV">Télécharger fichier</button>
+      <button id="FirstBut" @click="downloadCV">Télécharger fichier</button>
     </div>
   </div>
 </template>
@@ -19,9 +19,6 @@ const downloadCV = () => {
 </script>
 
 <style>
-h1 {
-  color: red;
-}
 .cv-container {
   text-align: center;
   margin-top: 20px;
@@ -33,19 +30,7 @@ h1 {
   max-width: 80%;
 }
 
-.buttons button {
-  background-color: #1e1e1e;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  opacity: 1;
-}
-
-.buttons button:hover {
-  background-color: #333333;
+.buttons {
+  margin-bottom: 1rem;
 }
 </style>

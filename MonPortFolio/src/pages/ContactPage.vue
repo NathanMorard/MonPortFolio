@@ -162,6 +162,13 @@ const handleSubmit = async () => {
             type: 'success',
             message: 'Email envoyé avec succès',
           }
+          formData.from = ''
+          formData.subject = ''
+          formData.message = ''
+
+          errors.from = ''
+          errors.subject = ''
+          errors.message = ''
         },
         error => {
           console.log("Erreur d'envoi d'email", error)
@@ -200,10 +207,11 @@ const handleSubmit = async () => {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  transition: height 0.3s ease;
+  height: auto;
 }
 
 h2 {
-  color: #333;
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 1.5rem;
@@ -216,14 +224,14 @@ h2 {
 label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #555;
   font-weight: 500;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border: 2px solid #e1e1e1;
   border-radius: 6px;
   font-size: 1rem;
@@ -232,11 +240,15 @@ textarea {
     box-shadow 0.3s;
 }
 
+#message {
+  resize: vertical;
+  min-height: 150px;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #4caf50;
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+  border-color: #fe934b;
 }
 
 .input-error {
@@ -252,7 +264,7 @@ textarea:focus {
 button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #4caf50;
+  background-color: #fe934b;
   color: white;
   border: none;
   border-radius: 6px;
@@ -263,7 +275,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #d15036;
 }
 
 button:disabled {

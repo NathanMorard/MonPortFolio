@@ -70,7 +70,7 @@ const closeMenu = () => {
 .header {
   display: flex;
   justify-content: center;
-  background-color: #333;
+  background-color: #2c3e50;
 }
 
 .navbar {
@@ -85,7 +85,7 @@ const closeMenu = () => {
   font-size: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: #ffffff; 
   cursor: pointer;
   margin-left: 1rem;
 }
@@ -93,7 +93,6 @@ const closeMenu = () => {
 .nav-links {
   display: flex;
   flex-grow: 1;
-  /* justify-content: center; */
   transition: transform 0.3s;
 }
 
@@ -103,14 +102,14 @@ const closeMenu = () => {
 
 .nav-item {
   padding: 1rem 2rem;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
-  background-color: #333;
+  background-color: #2c3e50;
   transition: background-color 0.3s;
 }
 
 .nav-item:hover {
-  background-color: #555;
+  background-color: #0099cc;
 }
 
 .active {
@@ -130,7 +129,7 @@ const closeMenu = () => {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #2c3e50;
     transform: translateY(-200%);
     z-index: 10;
   }

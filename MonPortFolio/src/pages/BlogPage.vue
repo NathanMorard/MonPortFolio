@@ -11,51 +11,51 @@
     <h2>Mon parcours</h2>
     <div class="timeline">
       <div class="container left">
-        <img src="../assets/img/logoStJo.jpg" alt="Amazon" />
+        <img src="../assets/img/logoStJo.jpg" alt="Logo saint joseph" />
         <div class="content">
           <h2>Lycée saint Joseph</h2>
           <small>2020 - 2021</small>
           <p>
-            Obtention d'un bac général option SVT MATH et Physique chimie au
-            lycée saint joseph à Avignon
+            Obtention d'un bac général spécialités SVT, mathématiques et
+            physique-chimie au lycée saint joseph à Avignon.
           </p>
           <span class="left-container-arrow"></span>
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/logoCA.jpg" alt="tesla" />
+        <img src="../assets/img/logoCA.jpg" alt="logo Campus Academy" />
         <div class="content">
           <h2>Campus Academy</h2>
           <small>2021 - 2022</small>
           <p>
-            Première année d'étude supérieur dans le domaine du développement
-            informatique à l'école Campus Academy qui a fermé ses portes
+            Première année d'étude supérieure dans le domaine du développement
+            informatique à l'école Campus Academy.
           </p>
           <span class="right-container-arrow"></span>
         </div>
       </div>
       <div class="container left">
-        <img src="../assets/img/logoCESI.jpg" alt="Flipkart" />
+        <img src="../assets/img/logoCESI.jpg" alt="Logo CESI" />
         <div class="content">
           <h2>CESI</h2>
           <small>2022 - 2023</small>
-          <p>Obtention d'un BTS 'Développeur informatique'</p>
+          <p>Obtention d'un BTS "Développeur informatique".</p>
           <span class="left-container-arrow"></span>
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/logoCESI.jpg" alt="Toyota" />
+        <img src="../assets/img/logoCESI.jpg" alt="Logo CESI" />
         <div class="content">
           <h2>CESI</h2>
           <small>2023 - 2024</small>
           <p>
-            Obtention d'un bachelor 'Concepteur et développeur d'application'
+            Obtention d'un bachelor "Concepteur et développeur d'application".
           </p>
           <span class="right-container-arrow"></span>
         </div>
       </div>
       <div class="container left">
-        <img src="../assets/img/logodg.jpg" alt="Flipkart" />
+        <img src="../assets/img/logodg.jpg" alt="Logo DG inventaires" />
         <div class="content">
           <h2>DG Inventaires & Co</h2>
           <small>2022 - 2024</small>
@@ -69,11 +69,11 @@
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/freelance.jpg" alt="Toyota" />
+        <img src="../assets/img/freelance.jpg" alt="Logo freelance" />
         <div class="content">
           <h2>Freelance</h2>
           <small>2024 - </small>
-          <p>Développeur informatique en freelance</p>
+          <p>Développeur informatique freelance.</p>
           <span class="right-container-arrow"></span>
         </div>
       </div>
@@ -190,6 +190,8 @@
   border-radius: 50%;
   top: 32px;
   z-index: 10;
+  border: solid;
+  border-width: thin;
 }
 
 .container.right img {
@@ -205,7 +207,7 @@
   position: absolute;
   width: 6px;
   height: 100%;
-  background-color: #d1cfcf;
+  background-color: #fe934b;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -222,12 +224,20 @@
 }
 
 .content h2 {
+  margin: 0;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
 .content small {
+  font-size: medium;
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+.content p {
+  margin: 0;
+  font-size: large;
 }
 
 .left-container-arrow {

@@ -1,28 +1,32 @@
 <template>
-  <div class="homepage">
-    <div class="content">
-      <h1>Nathan Morard</h1>
-      <h2>Développeur full-stack</h2>
-      <div class="buttons">
-        <RouterLink
-          to="/contact"
-          class="nav-item"
-          :class="{ active: $route.path === '/contact' }"
-        >
-          Me contacter
-        </RouterLink>
+  <div class="content">
+    <div class="wrapper">
+      <div class="text-box">
+        <h1>Nathan Morard</h1>
+        <h2>Développeur full-stack</h2>
+        <div class="buttons">
+          <RouterLink
+            to="/contact"
+            class="nav-item"
+            :class="{ active: $route.path === '/contact' }"
+            id="FirstBut"
+          >
+            Me contacter
+          </RouterLink>
 
-        <RouterLink
-          to="/Resume"
-          class="nav-item"
-          :class="{ active: $route.path === '/Resume' }"
-        >
-          Mon cv
-        </RouterLink>
+          <RouterLink
+            to="/Resume"
+            class="nav-item"
+            :class="{ active: $route.path === '/Resume' }"
+            id="SecondBut"
+          >
+            Mon cv
+          </RouterLink>
+        </div>
       </div>
-    </div>
-    <div class="img">
-      <img src="../assets/img/pp.jpg" alt="coucou" />
+      <div class="img">
+        <img class="image" src="../assets/img/pp.jpg" alt="coucou" />
+      </div>
     </div>
   </div>
 </template>
@@ -30,23 +34,43 @@
 <script setup></script>
 
 <style scoped>
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: white;
+.content {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.homepage {
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.text-box {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image {
+  max-width: 320px;
+  height: auto;
+}
+
+.img {
+  flex-shrink: 0;
+}
+
+/* .homepage {
   position: relative;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 55px; */
-  /* padding-top: 25dvh; */
-}
+  padding: 55px;
+  padding-top: 25dvh;
+} */
 
 .content {
   flex: 1;
@@ -54,15 +78,17 @@ body {
 }
 
 .content h1 {
+  color: Black;
   font-size: 4rem;
-  margin-bottom: 0.5rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .content h2 {
+  margin: 0;
+  padding-bottom: 2rem;
   font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #aaaaaa;
+  color: #1a2236;
 }
 
 .buttons {
@@ -70,25 +96,10 @@ body {
   gap: 1rem;
 }
 
-.buttons button {
-  background-color: #1e1e1e;
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  opacity: 1;
-}
 
-.buttons button:hover {
-  background-color: #333333;
-}
-
-.img {
+/* .img {
   height: 1dvh;
   width: 10dvh;
   margin-right: 100dvb;
-}
+} */
 </style>
