@@ -1,6 +1,6 @@
 services:
   portfolio:
-    build: ./MonPortfolio
+    build: ./MonPortFolio
     ports:
       - 8443:80
     networks:
