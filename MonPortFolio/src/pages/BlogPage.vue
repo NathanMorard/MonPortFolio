@@ -1,13 +1,40 @@
 <template>
   <div class="Content">
     <h1>Qui suis-je ?</h1>
-    <p id="txtPres">
-      Qui cum venisset ob haec festinatis itineribus Antiochiam, praestrictis
-      palatii ianuis, contempto Caesare, quem videri decuerat, ad praetorium cum
-      pompa sollemni perrexit morbosque diu causatus nec regiam introiit nec
-      processit in publicum, sed abditus multa in eius moliebatur exitium addens
-      quaedam relationibus supervacua, quas subinde dimittebat ad principem.
-    </p>
+    <div id="txtPres">
+      <p>
+        <strong>
+          🎯 Développeur informatique | Passionné par la création d'applications
+          et de solutions web innovantes
+        </strong>
+      </p>
+      <p>
+        Je suis Nathan Morard, développeur spécialisé dans la conception et le
+        développement d'applications et de sites web. Diplômé d'un Bachelor
+        Développeur et Concepteur d'Applications (2023-2024) après un BTS
+        Développement Informatique, je suis désormais freelance.
+      </p>
+      <p>💻 Compétences techniques :</p>
+
+      <p>
+        &nbsp; &nbsp;- Langages et frameworks : JavaScript, TypeScript, Python,
+        Vue.js, Flutter, Java (Spring), HTML, CSS, JSON, WinDev, WebDev
+      </p>
+      <p>&nbsp; &nbsp;- Bases de données : MySQL, MongoDB</p>
+      <p>
+        &nbsp; &nbsp;- Outils et gestion de projet : Hyper-V, gestion de projet
+        Agile, Jira
+      </p>
+      <p>
+        🌍 En quête de nouveaux défis : Je suis à la recherche de missions
+        captivantes pour appliquer mes compétences, innover, et accompagner mes
+        clients vers le succès.
+      </p>
+      <p>
+        📩 Contactez moi pour discuter d'une collaboration :
+        morard.nathan@gmail.com ou 0625836649
+      </p>
+    </div>
     <h2>Mon parcours</h2>
     <div class="timeline">
       <div class="container left">
