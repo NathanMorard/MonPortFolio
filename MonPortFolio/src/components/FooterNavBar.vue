@@ -9,7 +9,7 @@
           class="navLink"
         >
           <img
-            src="../assets/img/LI-In-Bug.png"
+            src="../assets/img/LI-In-Bug.jpg"
             alt="LinkedIn Logo"
             class="icon"
           />
@@ -25,7 +25,7 @@
           class="navLink"
         >
           <img
-            src="../assets/img/github-mark.png"
+            src="../assets/img/github-mark.jpg"
             alt="GitHub Logo"
             class="icon"
           />
@@ -45,10 +45,10 @@
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  position: sticky; /* Change from fixed to sticky */
-  bottom: 0; /* Keep it at the bottom of the page */
+  position: sticky;
+  bottom: 0;
   width: 100%;
-  margin-top: 2rem; /* Optional, to give space above */
+  margin-top: 2rem;
 }
 
 .navBar {
@@ -83,7 +83,7 @@
 
 .navLink {
   text-decoration: none;
-  color: inherit; /* Hérite la couleur du bouton */
+  color: inherit;
   display: flex;
   align-items: center;
   gap: 0.5rem;

@@ -18,6 +18,7 @@ import Footer from './components/FooterNavBar.vue'
 
 body {
   margin: 0;
+  height: 100%;
   /* background: #2e364a; */
 }
 </style>

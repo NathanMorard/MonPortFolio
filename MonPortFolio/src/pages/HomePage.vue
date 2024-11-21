@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="img">
-      <img src="../assets/img/pp.png" alt="coucou" />
+      <img src="../assets/img/pp.jpg" alt="coucou" />
     </div>
   </div>
 </template>

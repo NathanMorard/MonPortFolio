@@ -11,7 +11,7 @@
     <h2>Mon parcours</h2>
     <div class="timeline">
       <div class="container left">
-        <img src="../assets/img/logoStJo.png" alt="Amazon" />
+        <img src="../assets/img/logoStJo.jpg" alt="Amazon" />
         <div class="content">
           <h2>Lycée saint Joseph</h2>
           <small>2020 - 2021</small>
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/logoCA.png" alt="tesla" />
+        <img src="../assets/img/logoCA.jpg" alt="tesla" />
         <div class="content">
           <h2>Campus Academy</h2>
           <small>2021 - 2022</small>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="container left">
-        <img src="../assets/img/logoCESI.png" alt="Flipkart" />
+        <img src="../assets/img/logoCESI.jpg" alt="Flipkart" />
         <div class="content">
           <h2>CESI</h2>
           <small>2022 - 2023</small>
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/logoCESI.png" alt="Toyota" />
+        <img src="../assets/img/logoCESI.jpg" alt="Toyota" />
         <div class="content">
           <h2>CESI</h2>
           <small>2023 - 2024</small>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="container left">
-        <!-- <img src="../assets/img/logodg.png" alt="Flipkart" /> -->
+        <img src="../assets/img/logodg.jpg" alt="Flipkart" />
         <div class="content">
           <h2>DG Inventaires & Co</h2>
           <small>2022 - 2024</small>
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="container right">
-        <img src="../assets/img/freelance.png" alt="Toyota" />
+        <img src="../assets/img/freelance.jpg" alt="Toyota" />
         <div class="content">
           <h2>Freelance</h2>
           <small>2024 - </small>
@@ -78,14 +78,16 @@
         </div>
       </div>
     </div>
-    <div class="Skills">
+    <!-- <div class="Skills">
       <div class="wrapper">
-        <img class="image" src="../assets/img/pp.png" alt="photo de profil" />
         <div class="text-box">
           <h2>Mes competences</h2>
         </div>
+        <div class="img">
+          <img class="image" src="../assets/img/pp.jpg" alt="photo de profil" />
+        </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
