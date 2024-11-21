@@ -1,7 +1,8 @@
 <template>
   <div class="cv-container">
     <h1>Mon CV</h1>
-    <img src="../assets/img/cv.png" alt="CV Nathan Morard" class="cv-image" />
+    <!-- <img src="../assets/img/cv.png" alt="CV Nathan Morard" class="cv-image" /> -->
+    <img src="../assets/img/CV.jpg" alt="CV Nathan Morard" class="cv-image" />
     <div class="buttons">
       <button @click="downloadCV">Télécharger fichier</button>
     </div>

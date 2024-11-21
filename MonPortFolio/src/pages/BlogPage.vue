@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="container left">
-        <img src="../assets/img/logodg.png" alt="Flipkart" />
+        <!-- <img src="../assets/img/logodg.png" alt="Flipkart" /> -->
         <div class="content">
           <h2>DG Inventaires & Co</h2>
           <small>2022 - 2024</small>
