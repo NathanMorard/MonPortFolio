@@ -1,0 +1,12 @@
+services:
+  portfolio:
+    build: ./MonPortfolio
+    ports:
+      - 8443:80
+    networks:
+      nginxpm:
+
+networks:
+  nginxpm:
+    name: nginxpm_nginxpm
+    external: true
