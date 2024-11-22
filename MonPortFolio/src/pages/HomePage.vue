@@ -38,9 +38,10 @@
 
 <style scoped>
 .content {
-  background-image: url('../assets/img/backgroundHome.jpg');
-  background-size: cover;
+  background: url('../assets/img/backgroundHome.jpg');
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   min-height: 100vh;
