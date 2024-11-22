@@ -83,6 +83,7 @@
       </div>
       <div class="container left">
         <!-- <img :src="logoDG" alt="Logo DG inventaires" /> -->
+        <img src="../assets/img/logoDG.jpg" alt="" />
         <div class="content">
           <h2>DG Inventaires & Co</h2>
           <small>2022 - 2024</small>
@@ -105,57 +106,35 @@
         </div>
       </div>
     </div>
-    <!-- <div class="Skills">
-      <div class="wrapper">
-        <div class="text-box">
-          <h2>Mes competences</h2>
-        </div>
-        <div class="img">
-          <img class="image" src="../assets/img/pp.jpg" alt="photo de profil" />
-        </div>
-      </div>
-    </div> -->
+    <div class="text-img">
+      <textImgModele
+        class="text-img"
+        :imageSrc="nuage"
+        texth1="Mes compétences"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
-// import logoDG from '../assets/img/logodg.jpg'
+import textImgModele from '@/components/textImgModele.vue'
+import nuage from '@/assets/img/nuage.jpg'
 </script>
 
 <style scoped>
-.Skills {
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background: blue;
-}
-
-.wrapper {
-  margin: 150px auto;
-  width: 70%;
-}
-
-.image {
-  float: left;
-  max-width: 320px;
-}
-
-.text-box {
-  color: black;
-}
-
-.text-box h2 {
-  font-size: 42px;
-}
-
 .content {
   align-content: center;
+  padding: 20px 30px;
+  background-color: #d1cfcf;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
 }
 
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 }
 
 .container {
@@ -203,14 +182,6 @@
 
 .container.right {
   right: 0;
-}
-
-.content {
-  padding: 20px 30px;
-  background-color: #d1cfcf;
-  position: relative;
-  border-radius: 6px;
-  font-size: 15px;
 }
 
 .container img {
@@ -317,6 +288,13 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
+}
+
+.text-img {
+  background-color: white;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

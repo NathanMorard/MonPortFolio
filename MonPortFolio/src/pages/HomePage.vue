@@ -96,7 +96,6 @@
   gap: 1rem;
 }
 
-
 /* .img {
   height: 1dvh;
   width: 10dvh;

@@ -85,7 +85,7 @@ const closeMenu = () => {
   font-size: 2rem;
   background: none;
   border: none;
-  color: #ffffff; 
+  color: #ffffff;
   cursor: pointer;
   margin-left: 1rem;
 }
