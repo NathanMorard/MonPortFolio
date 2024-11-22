@@ -46,3 +46,10 @@ p {
 #SecondBut:hover {
   background-color: #62b5be;
 }
+
+@media (max-width: 768px) {
+  body{
+    max-width: 100%;
+  }
+
+}
