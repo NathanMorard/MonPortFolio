@@ -38,7 +38,7 @@
 
 <style scoped>
 .content {
-  background: url('../assets/img/backgroundHome.jpg');
+  background: url('../assets/img/backgroundHome.jpg') !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
