@@ -29,3 +29,5 @@ coverage
 
 *.tsbuildinfo
 vuejs-app.tar
+
+.env

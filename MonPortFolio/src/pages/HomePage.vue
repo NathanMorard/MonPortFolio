@@ -1,9 +1,6 @@
 <template>
   <div class="content">
     <div class="wrapper">
-      <div class="image-container">
-        <img class="image" src="../assets/img/pp.jpg" alt="Profile Picture" />
-      </div>
       <div class="text-box">
         <h1>Nathan Morard</h1>
         <h2>Développeur full-stack</h2>
@@ -27,9 +24,13 @@
           </RouterLink>
         </div>
       </div>
-      <!-- <div class="img">
-        <img class="image" src="../assets/img/pp.jpg" alt="coucou" />
-      </div> -->
+      <div class="image-container">
+        <img
+          class="image"
+          src="https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/pcep2xhny4r6ly2k7fu9"
+          alt="Profile Picture"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -38,10 +39,7 @@
 
 <style scoped>
 .content {
-  background: url('../assets/img/backgroundHome.jpg') !important;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url('https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/oqioylp7i14drwczwory') !important;
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -57,16 +55,12 @@
 }
 
 .text-box {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.image-container {
-  display: none;
+  width: 300ch;
+  margin-right: 30px;
 }
 
 .image {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 50%;
   border: solid;
@@ -100,7 +94,7 @@
 /* Mobile-specific styling */
 @media (max-width: 768px) {
   .content {
-    background-image: url('../assets/img/backgroundHomePhone.jpg');
+    /* background-image: url('../assets/img/backgroundHomePhone.jpg') !important; */
     max-width: 768px;
   }
 
@@ -129,8 +123,8 @@
 
   .image-container {
     display: block;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 </style>
