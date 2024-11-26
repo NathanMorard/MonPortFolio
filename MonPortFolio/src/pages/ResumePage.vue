@@ -1,7 +1,11 @@
 <template>
   <div class="cv-container">
     <h1>Mon CV</h1>
-    <img src="../assets/img/CV.jpg" alt="CV Nathan Morard" class="cv-image" />
+    <img
+      src="https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/su2sv4wnzdfgxlfu3ifd"
+      alt="CV Nathan Morard"
+      class="cv-image"
+    />
     <div class="buttons">
       <button id="FirstBut" @click="downloadCV">Télécharger fichier</button>
     </div>
