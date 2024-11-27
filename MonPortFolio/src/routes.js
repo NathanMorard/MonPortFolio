@@ -10,6 +10,6 @@ export const routes = [
   { path: '/blog', component: BlogPage },
   { path: '/contact', component: ContactPage },
   { path: '/resume', component: ResumePage },
-  { path: '/realisation', component: RealisationPage },
-  { path: '/test', component: TestPage },
+  // { path: '/realisation', component: RealisationPage },
+  // { path: '/test', component: TestPage },
 ]

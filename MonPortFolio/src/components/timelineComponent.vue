@@ -79,9 +79,9 @@
         alt="Logo freelance"
       />
       <div class="content">
-        <h2>Freelance</h2>
+        <h2>Développeur full-stack</h2>
         <small>2024 - </small>
-        <p>Développeur informatique freelance.</p>
+        <p>Développeur informatique full-stack en freelance .</p>
         <span class="right-container-arrow"></span>
       </div>
     </div>

@@ -1,6 +1,13 @@
 <template>
   <div class="content">
     <div class="wrapper">
+      <div class="image-container">
+        <img
+          class="image"
+          src="https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/pcep2xhny4r6ly2k7fu9"
+          alt="Profile Picture"
+        />
+      </div>
       <div class="text-box">
         <h1>Nathan Morard</h1>
         <h2>Développeur full-stack</h2>
@@ -15,7 +22,7 @@
           </RouterLink>
 
           <RouterLink
-            to="/Resume"
+            to="/resume"
             class="nav-item"
             :class="{ active: $route.path === '/Resume' }"
             id="SecondBut"
@@ -23,13 +30,6 @@
             Mon cv
           </RouterLink>
         </div>
-      </div>
-      <div class="image-container">
-        <img
-          class="image"
-          src="https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/pcep2xhny4r6ly2k7fu9"
-          alt="Profile Picture"
-        />
       </div>
     </div>
   </div>
@@ -39,37 +39,43 @@
 
 <style scoped>
 .content {
-  background: url('https://res.cloudinary.com/dqf0ba8xy/image/upload/f_auto,q_auto/v1/imgPotfolio/oqioylp7i14drwczwory') !important;
+  background: url('https://utfs.io/f/YTngrWOozNXkdcPqTFsHzN4UP1kYrZLje5wVuJE2FCi7xpOf') !important;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   flex: 1;
   text-align: left;
 }
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 70%;
+  gap: 2rem;
 }
 
 .text-box {
-  width: 300ch;
-  margin-right: 30px;
+  width: auto;
+  max-width: 60%;
+  margin-right: 0;
+}
+
+.image-container {
+  flex-shrink: 0;
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
   width: 80%;
+  max-width: 300px;
   height: auto;
   border-radius: 50%;
   border: solid;
   border-color: #fe934b;
   object-fit: cover;
-}
-
-.img {
-  flex-shrink: 0;
 }
 
 .content h1 {
@@ -94,22 +100,21 @@
 /* Mobile-specific styling */
 @media (max-width: 768px) {
   .content {
-    /* background-image: url('../assets/img/backgroundHomePhone.jpg') !important; */
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
     max-width: 768px;
   }
 
   .wrapper {
     flex-direction: column;
     text-align: center;
-    width: 90%;
+    width: 100%;
   }
 
   .text-box {
-    padding-right: 0;
-  }
-
-  .content h1 {
-    font-size: 3rem;
+    margin-left: 0;
+    max-width: 90%;
   }
 
   .content h2 {
@@ -122,9 +127,7 @@
   }
 
   .image-container {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    width: 70%;
   }
 }
 </style>
