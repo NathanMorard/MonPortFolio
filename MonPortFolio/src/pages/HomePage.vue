@@ -22,7 +22,7 @@
           </RouterLink>
 
           <RouterLink
-            to="/Resume"
+            to="/resume"
             class="nav-item"
             :class="{ active: $route.path === '/Resume' }"
             id="SecondBut"
