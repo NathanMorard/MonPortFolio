@@ -15,7 +15,7 @@
 <script setup>
 const downloadCV = () => {
   const link = document.createElement('a')
-  link.href = '../../public/pdf/CV.pdf'
+  link.href = '../pdf/CV.pdf'
   link.download = 'cv_nathan_morard.pdf'
   link.click()
 }
